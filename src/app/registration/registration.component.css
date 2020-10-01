@@ -1,0 +1,16 @@
+h1,label{
+        font-family: Times New Roman;
+        text-align: center;
+			}
+.tt{
+				margin: 5%;
+      }
+.image
+{
+  background-image: url('E:\Demo\demoapp\src\assets\1.jpg');
+  height: 750px;
+  background-size: cover;
+  background-position: 50% 50%;
+ 
+
+}

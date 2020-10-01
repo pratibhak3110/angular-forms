@@ -1,0 +1,21 @@
+<div class="container mt-3">
+  <div class="row">
+  <div class="col-md-3">
+  </div>
+  <div class="col-md-6">
+  <form  [formGroup]="signupForm" (ngSubmit)="OnSignup()">
+    <label>Name</label>
+  <input type="text" formControlName="name" placeholder="enter name">
+  <p *ngIf="signupForm.get('name').hasError('required') && !signupForm.get('name').pristine">Name is required</p>
+  <br><br>
+  <label>Email</label>
+  <input type="email" formControlName="email" placeholder="enter name">
+  <br><br>
+    <button type="submit">
+      SignUp
+    </button>
+</form>
+</div>
+</div>
+</div>
+
