@@ -27,6 +27,8 @@ import { ButtonsComponent } from './buttons/buttons.component';
 import { AddtocartComponent } from './addtocart/addtocart.component';
 import { SignupComponent } from './signup/signup.component';
 import { DemoComponent } from './demo/demo.component';
+import { FormsComponent } from './forms/forms.component';
+import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,9 @@ import { DemoComponent } from './demo/demo.component';
     ButtonsComponent,
     AddtocartComponent,
     SignupComponent,
-    DemoComponent
+    DemoComponent,
+    FormsComponent,
+    ReactiveformComponent
   ],
   imports: [
     BrowserModule,

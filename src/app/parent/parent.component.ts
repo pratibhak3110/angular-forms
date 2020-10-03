@@ -57,7 +57,7 @@ export class ParentComponent implements OnInit {
 
   OnProductButtonCLick()
   {
-    this.flag1= !this.flag;
+    this.flag1= !this.flag1;
   }
 
   onclick()

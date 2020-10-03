@@ -10,6 +10,7 @@ import { ButtonsComponent } from './buttons/buttons.component';
 import { AddtocartComponent } from './addtocart/addtocart.component';
 import { SignupComponent } from './signup/signup.component';
 import { DemoComponent } from './demo/demo.component';
+import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 
 
 const arr: Routes=[
@@ -22,8 +23,10 @@ const arr: Routes=[
   {path: 'registration',component: RegistrationComponent},
   {path: 'login', component: LoginComponent},
   {path: 'signup', component: SignupComponent},
-  {path:'pagenotfound', component: PagenotfoundComponent},
   {path: 'demo', component: DemoComponent},
+  {path: 'reactiveform', component: ReactiveformComponent},
+  {path:'pagenotfound', component: PagenotfoundComponent},
+
  // {path: "**", redirectTo: '/pagenotfound'}
 ];
 

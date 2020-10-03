@@ -1,5 +1,6 @@
+import { ValueConverter } from '@angular/compiler/src/render3/view/template';
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-demo',
@@ -7,19 +8,13 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./demo.component.css']
 })
 export class DemoComponent implements OnInit {
-  signupForm: FormGroup;
+
   constructor() { }
 
   ngOnInit(): void {
-
-    this.signupForm= new FormGroup({
-     name: new FormControl(null,[Validators.required]),
-     email: new FormControl(null),
-    })
   }
 
-  OnSignup(){
-    console.log(this.signupForm);
+  OnEmpAdd(f){
+    console.log(f);
   }
-
 }
