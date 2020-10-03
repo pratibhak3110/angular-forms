@@ -13,6 +13,7 @@
                 <input type="text" formControlName="name" class="form-control">
                 <p class="lblError" *ngIf="signupForm.get('name').hasError('required') && !signupForm.get('name').pristine">Name is required.</p>
                 <p class="lblError" *ngIf="signupForm.get('name').hasError('minlength') && !signupForm.get('name').pristine">Min length is 5.</p>
+                <p class="lblError" *ngIf="signupForm.get('name').hasError('invalidName')  && !signupForm.get('name').pristine">Invalid name</p>
               </div>
             </div>
 
@@ -25,11 +26,53 @@
               </div>
             </div>
 
+          <div formGroupName="passwordgroup">
+            <div class="form-group div">
+              <label>Password: <span class="lblError">*</span></label>
+              <div class="controls">
+                <input type="password" formControlName="password" class="form-control">
+                <p class="lblError" *ngIf="signupForm.get('passwordgroup').get('password').hasError('required') && !signupForm.get('passwordgroup').get('password').pristine">Password is required</p>
+              </div>
+            </div>
+
+            <div class="form-group div">
+              <label>ConfirmPassword: <span class="lblError">*</span></label>
+              <div class="controls">
+                <input type="password" formControlName="confirmpassword" class="form-control">
+                <p class="lblError" *ngIf="signupForm.get('passwordgroup').get('confirmpassword').hasError('required') && !signupForm.get('passwordgroup').get('confirmpassword').pristine">Confirm Password is required</p>
+
+              </div>
+            </div>
+
+            <p class="lblError" *ngIf="signupForm.get('passwordgroup').hasError('passwordMatchError') && !signupForm.get('passwordgroup').pristine">
+              Password doesn't match</p>
+          </div>
+
+          <div class="form-group" style="margin: 4%;">
+            <div class="controls">
+              <input type="radio" value="male" class="form-check-input" formControlName="gender">Male &nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="radio" value="female" class="form-check-input" formControlName="gender">Female
+            </div>
+          </div>
+
+          <div class="form-group div">
+            <label>Select City: </label>&nbsp;
+              <select formControlName="city">
+                <option value="">Select</option>
+                <option value="hyderabad">Hyderabad</option>
+                <option value="chennai">Chennai</option>
+                <option value="pune">Pune</option>
+                <option value="bengaluru">Bengaluru</option>
+              </select>
+              <p *ngIf="signupForm.get('city').hasError('required') && !signupForm.get('city').pristine" class="lblError">
+                Please select City.</p>
+          </div>
             <div class="form-group">
             <button class="btn btn-primary" type="submit" [disabled]="signupForm.invalid">Signup</button>
             </div>
-</form>
-</div>
-</div>
+            <!--[disabled]="signupForm.invalid"-->
+    </form>
+  </div>
+  </div>
 </div>
 
