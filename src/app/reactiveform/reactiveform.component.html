@@ -17,6 +17,13 @@
               </div>
             </div>
 
+            <div class="form-group" style="margin: 4%;">
+              <div class="controls">
+              <input type="radio" formControlName="notification" value="email" class="form-check-input">Email &nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="radio" formControlName="notification" value="phone" class="form-check-input">Phone
+              </div>
+            </div>
+
             <div class="form-group div">
               <label>Email: <span class="lblError">*</span></label>
               <div class="controls">
@@ -26,6 +33,14 @@
               </div>
             </div>
 
+            <div class="fomr-group div">
+              <label>Phone <span class="lblError">*</span></label>
+              <div class="controls">
+                <input type="number" class="form-control" formControlName="phone">
+                <p class="lblError" *ngIf="signupForm.get('phone').hasError('required') && !signupForm.get('phone').pristine">Phone is required</p>
+              </div>  
+            </div>
+          
           <div formGroupName="passwordgroup">
             <div class="form-group div">
               <label>Password: <span class="lblError">*</span></label>
@@ -67,8 +82,20 @@
               <p *ngIf="signupForm.get('city').hasError('required') && !signupForm.get('city').pristine" class="lblError">
                 Please select City.</p>
           </div>
+
+          <div class="form-group">
+            <label class="div">Hobbies: </label>
+            <div class="control">
+             <button class="btn btn-primary" (click)="OnAddHobbies()">Add Hobbies</button>
+             <div formArrayName="hobbies" *ngFor="let item of getControl(); let i=index "><br>
+               <input type="text" [formControlName]="i" class="form-control">
+              <button class="btn btn-warning" (click)="OnRemoveHobbies(i)">Remove</button>
+            </div>
+            </div>
+          </div>
+
             <div class="form-group">
-            <button class="btn btn-primary" type="submit" [disabled]="signupForm.invalid">Signup</button>
+            <button class="btn btn-primary" type="submit" >Signup</button>
             </div>
             <!--[disabled]="signupForm.invalid"-->
     </form>

@@ -7,10 +7,18 @@ import {  AngularformComponent  } from "./angularform/angularform.component";
 
 import { ParentComponent } from './parent/parent.component';
 import { ButtonsComponent } from './buttons/buttons.component';
-import { AddtocartComponent } from './addtocart/addtocart.component';
-import { SignupComponent } from './signup/signup.component';
+
+
 import { DemoComponent } from './demo/demo.component';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
+import { FormsComponent } from './forms/forms.component';
+import { ForDemoComponent } from './for-demo/for-demo.component';
+import { ShowtableComponent } from './showtable/showtable.component';
+import { HelloWorldComponent } from './hello-world/hello-world.component';
+import { TodosComponent } from './todos/todos.component';
+import { ProductComponent } from './product/product.component';
+import { EmployeeComponent } from './employee/employee.component';
+
 
 
 const arr: Routes=[
@@ -18,13 +26,20 @@ const arr: Routes=[
   {path: '',component:AngularformComponent},
   {path: 'parent', component: ParentComponent},
   {path: 'button', component: ButtonsComponent},
-  {path: 'cart', component: AddtocartComponent},
+
   {path: 'home', component: HomeComponent},
   {path: 'registration',component: RegistrationComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'signup', component: SignupComponent},
+
   {path: 'demo', component: DemoComponent},
   {path: 'reactiveform', component: ReactiveformComponent},
+  {path: 'form', component:FormsComponent},
+  {path: 'fordemo', component: ForDemoComponent},
+  {path: 'showtable', component: ShowtableComponent},
+  {path: 'hello', component: HelloWorldComponent},
+  {path: 'todo', component: TodosComponent},
+  {path: 'product',component: ProductComponent},
+  {path:'employee',component: EmployeeComponent},
   {path:'pagenotfound', component: PagenotfoundComponent},
 
  // {path: "**", redirectTo: '/pagenotfound'}

@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit, ViewEncapsulation, Output,Input } from '@angular/core';
-import { ProductComponent } from '../product/product.component';
+
 import { Product1 } from "./product";
 
 @Component({
@@ -27,8 +27,6 @@ export class ParentComponent implements OnInit {
 
   productarr2: Product1[]=[];
 
- @Input() cartName:string='';
-  @Output() addcart= new EventEmitter();
   constructor() { }
 
   ngOnInit(): void {

@@ -24,8 +24,8 @@ import { HomeComponent } from './home/home.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { AngularformComponent } from './angularform/angularform.component';
 import { ButtonsComponent } from './buttons/buttons.component';
-import { AddtocartComponent } from './addtocart/addtocart.component';
-import { SignupComponent } from './signup/signup.component';
+
+
 import { DemoComponent } from './demo/demo.component';
 import { FormsComponent } from './forms/forms.component';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
@@ -50,11 +50,11 @@ import { ReactiveformComponent } from './reactiveform/reactiveform.component';
     PagenotfoundComponent,
     AngularformComponent,
     ButtonsComponent,
-    AddtocartComponent,
-    SignupComponent,
+
+
     DemoComponent,
     FormsComponent,
-    ReactiveformComponent
+    ReactiveformComponent,
   ],
   imports: [
     BrowserModule,
@@ -62,8 +62,11 @@ import { ReactiveformComponent } from './reactiveform/reactiveform.component';
     FormsModule,
     ReactiveFormsModule,
     arrRouting,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+}

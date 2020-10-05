@@ -9,12 +9,12 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" routerLink="./home" style="font-size: 21px;">Home</a>
+        <a class="nav-link" routerLink="/home" style="font-size: 21px;">Home</a>
       </li>
 
-      <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+     <!--<li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
         <a class="nav-link" href=" " style="font-size: 21px;">Emp Add<span class="sr-only">(current)</span></a>
-      </li>
+      </li>-->
    <!-- <li class="nav-item" routerLinkActive="active">
         <a class="nav-link" routerLink="./registration" style="font-size: 21px;">Registration</a>
       </li>-->
@@ -22,17 +22,33 @@
         <a class="nav-link" routerLink="./login" style="font-size: 21px;">Login</a>
       </li>-->
 
-      <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" href="./signup " style="font-size: 21px;">SignUp<span class="sr-only">(current)</span></a>
-      </li>
 
       <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" href="./demo" style="font-size: 21px;">Template Form<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/demo" style="font-size: 21px;">Template Form<span class="sr-only">(current)</span></a>
       </li>
 
       <li class="nav-item" routerLinkActive="active" >
-        <a class="nav-link" href="./reactiveform" style="font-size: 21px;">Reactive Form<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/reactiveform" style="font-size: 21px;">Reactive Form<span class="sr-only">(current)</span></a>
       </li>
+
+      <li class="nav-item" routerLinkActive="active" >
+        <a class="nav-link" href="/form" style="font-size: 21px;">Novodhi Form<span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item dropdown" routerLinkActive="active">
+        <a class="nav-link dropdown-toggle" href="#" style="font-size: 21px;" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/fordemo">For Demo</a>
+          <a class="dropdown-item" href="/hello">Hello World</a>
+           <a class="dropdown-item" href="/todo">Todo</a>
+           <a class="dropdown-item" href="/product">Product</a>
+           <a class="dropdown-item" href="/employee">Employee</a>
+          <a class="dropdown-item" href="/showtable">Show Table</a>
+        </div>
+      </li>
+
       </ul>
 </div>
 </nav>

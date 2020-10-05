@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-reactiveform',
@@ -29,9 +29,15 @@ export class ReactiveformComponent implements OnInit {
                 Validators.required]),
               },
               [this.matchPassword.bind(this)]),
+
       gender:new FormControl("male"),
 
       city: new FormControl("bengaluru",[Validators.required]),
+
+      hobbies: new FormArray([]),
+
+      notification:new FormControl('email'),
+      phone: new FormControl(null),
     });
 
   }
@@ -52,6 +58,21 @@ export class ReactiveformComponent implements OnInit {
       return {passwordMatchError: true};
     }
     return null;
+  }
+
+  getControl(){
+    return (<FormArray> this.signupForm.get('hobbies')).controls;
+  }
+
+  OnAddHobbies(){
+    if(this.signupForm.get('hobbies').value){
+      const control= new FormControl();
+      return (<FormArray> this.signupForm.get('hobbies')).push(control);
+    }
+  }
+
+  OnRemoveHobbies(i){
+    return (<FormArray> this.signupForm.get('hobbies')).removeAt(i);
   }
 
 }
